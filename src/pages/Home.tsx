@@ -2,10 +2,12 @@ import SmNavBar from "@/components/NavBar/SmNavBar";
 import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
 import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+
 
 
 export default function Home(){
-    const select = useSelector((state)=>state.nav.selected)
+    const select = useSelector((state:RootState)=>state.nav.selected)
     return (
         <>
         <div className="w-full h-1 bg-pink-600">

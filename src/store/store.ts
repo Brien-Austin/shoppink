@@ -14,8 +14,11 @@ const reducer = combineReducers({
     nav : navOptionSlice,
 })
 const persistedReducer = persistReducer(persistConfig,reducer)
-export default configureStore(
+export const store = configureStore(
     {
         reducer:persistedReducer
     }
 )
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
