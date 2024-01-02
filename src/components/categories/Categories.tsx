@@ -10,7 +10,7 @@ const Categories:React.FC=()=>{
      {
        
        categoriesData.map((data,index)=>(
-       <div key={index} className='carousel border rounded'>
+       <div key={index} className='carousel shadow-md rounded'>
           <Categorycard  id={data.id}name = {data.name} img={data.link} />
        </div>
        ))
