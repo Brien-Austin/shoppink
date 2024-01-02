@@ -10,7 +10,7 @@ const CategoryCard:React.FC<categoryProps> = ({id,name,img}) => {
 <>
   <div key={id} className='carousel relative'>
 
-    <img src={img} className='object-cover brightness-50 rounded w-72 h-48' alt="" />
+    <img src={img} className='object-cover brightness-50 rounded lg:w-72 lg:h-48 sm:h-32 sm:w-40' alt="" />
     <h1 className='absolute inset-0 flex items-center justify-center text-white text-shadow'>{name}</h1>
   </div>
 </>
