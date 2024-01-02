@@ -1,9 +1,11 @@
 import SmNavBar from "@/components/NavBar/SmNavBar";
 import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
+import { useSelector } from "react-redux";
 
 
 export default function Home(){
+    const select = useSelector((state)=>state.nav.selected)
     return (
         <>
         <div className="w-full h-1 bg-pink-600">
@@ -22,6 +24,7 @@ export default function Home(){
        <div className="mx-16 sm:mx-5">
        <h1 className="mt-4 lg:text-2xl sm:text-xl font-bold text-slate-800">Explore Categories</h1>
        <Categories/>
+       <h1>{select}</h1>
        </div>
         </div>
         </>
