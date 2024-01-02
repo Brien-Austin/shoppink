@@ -3,10 +3,11 @@ import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import React from "react";
 
 
 
-export default function Home(){
+const  Home:React.FC =()=>{
     const select = useSelector((state:RootState)=>state.nav.selected)
     return (
         <>
@@ -33,3 +34,4 @@ export default function Home(){
       
     )
 }
+export default Home;

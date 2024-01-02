@@ -1,7 +1,7 @@
 import SmNavBar from '@/components/NavBar/SmNavBar'
 import React from 'react'
 
-const Categories = () => {
+const Categories:React.FC = () => {
   return (
   <>
   <SmNavBar/>

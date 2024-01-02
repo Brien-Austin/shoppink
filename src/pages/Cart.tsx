@@ -1,7 +1,7 @@
 import SmNavBar from '@/components/NavBar/SmNavBar'
 import React from 'react'
 
-const Cart = () => {
+const Cart:React.FC = () => {
   return (
    <>
    <SmNavBar/>
