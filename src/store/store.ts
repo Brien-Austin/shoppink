@@ -3,6 +3,7 @@ import navOptionSlice from './features/navOptionSlice'
 import { persistReducer } from 'redux-persist'
 import { combineReducers } from '@reduxjs/toolkit'
 import storage from 'redux-persist/lib/storage'
+import categorySlice from './features/categorySlice'
 
 const persistConfig = {
     key :'root',
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const reducer = combineReducers({
     nav : navOptionSlice,
+    category : categorySlice,
 })
 const persistedReducer = persistReducer(persistConfig,reducer)
 export const store = configureStore(
