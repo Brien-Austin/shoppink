@@ -1,10 +1,38 @@
-import { NavigationData } from '@/pages/Home';
+
 import { selectOption } from '@/store/features/navOptionSlice';
 import { RootState } from '@/store/store';
-import { Bell, Home, List, ShoppingBag, User } from 'lucide-react'
+import { Home as House ,List ,Bell,User,ShoppingBag} from "lucide-react";
+
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
+const NavigationData = [
+    {
+        name : 'House',
+        link : '/',
+        icon : <House/>
+    },
+    {
+        name : 'Categories',
+        link : '/categories',
+        icon : <List/>
+    },
+    {
+        name : 'Notifications',
+        link : '/notifications',
+        icon : <Bell/>
+    },
+    {
+        name : 'Home',
+        link : '/profile',
+        icon : <User/>
+    },
+    {
+        name : 'Cart',
+        link : '/cart',
+        icon : <ShoppingBag/>
+    },
+]
 
 const SmNavBar:React.FC = () => {
     const dispatch = useDispatch();

@@ -5,36 +5,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import React from "react";
 
-import { Home as House ,List ,Bell,User,ShoppingBag} from "lucide-react";
 
 
-export const NavigationData = [
-    {
-        name : 'House',
-        link : '/',
-        icon : <House/>
-    },
-    {
-        name : 'Categories',
-        link : '/categories',
-        icon : <List/>
-    },
-    {
-        name : 'Notifications',
-        link : '/notifications',
-        icon : <Bell/>
-    },
-    {
-        name : 'Home',
-        link : '/profile',
-        icon : <User/>
-    },
-    {
-        name : 'Cart',
-        link : '/cart',
-        icon : <ShoppingBag/>
-    },
-]
 
 
 const  Home:React.FC =()=>{
