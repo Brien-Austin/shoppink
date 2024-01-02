@@ -14,7 +14,7 @@ export default function Home(){
         <NavBar/>
         <SmNavBar/>
        <div className="mx-16 sm:mx-5">
-       <h1 className="mt-4 text-2xl font-bold text-slate-800">Explore Various Categories</h1>
+       <h1 className="mt-4 lg:text-2xl sm:text-xl font-bold text-slate-800">Explore Various Categories</h1>
        <Categories/>
        </div>
         </div>
