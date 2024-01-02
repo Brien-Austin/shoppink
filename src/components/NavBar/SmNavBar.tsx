@@ -1,11 +1,14 @@
+import { NavigationData } from '@/pages/Home';
 import { selectOption } from '@/store/features/navOptionSlice';
+import { RootState } from '@/store/store';
 import { Bell, Home, List, ShoppingBag, User } from 'lucide-react'
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 
 const SmNavBar:React.FC = () => {
     const dispatch = useDispatch();
+    const selectedNav = useSelector((state:RootState)=>state.nav.selected)
     const handleNav = (option:string) =>{
         dispatch(selectOption(option))
     }
@@ -13,11 +16,12 @@ const SmNavBar:React.FC = () => {
     <nav className=" lg:hidden sm:block fixed bottom-0 left-0 w-full border  text-white p-4 px-5">
     
     <div className='flex justify-center items-center gap-5 mx-5'>
-    <Link to={"/"}><div onClick={()=>handleNav('Home')} className='flex flex-col gap-1 items-center text-black text-[10px]'><Home className='text-slate-600 text-[8px]'/>Home</div></Link>
-    <Link to={"/categories"}><div  onClick={()=>handleNav('Categories')} className='flex flex-col gap-1 items-center text-black text-[10px]'><List className='text-slate-600 text-[8px]'/>Categories</div></Link>
-    <Link to={"/notifications"}><div  onClick={()=>handleNav('Notifications')} className='flex flex-col gap-1 items-center text-black text-[10px]'><Bell className='text-slate-600 text-[8px]'/>Notifications</div></Link>
-    <Link to={"/profile"}><div  onClick={()=>handleNav('Account')} className='flex flex-col gap-1 items-center text-black text-[10px]'><User className='text-slate-600 text-[8px]'/>Account</div></Link>
-    <Link to={"/cart"}><div  onClick={()=>handleNav('Cart')} className='flex flex-col gap-1 items-center text-black text-[10px]'><ShoppingBag className='text-slate-600 text-[8px]'/>Cart</div></Link>
+        {NavigationData.map((data,index)=>(
+           <Link to={data.link}onClick={()=>handleNav(data.name)} key={index}>
+             <h1 className={`flex flex-col gap-1 items-center  text-[10px] ${selectedNav ===data.name ? 'text-pink-600' :'text-slate-700'}`}> <span>{data.icon}</span> {data.name} </h1>
+           </Link>
+        ))}
+   
    
     </div>
   </nav>
