@@ -1,12 +1,18 @@
+import { Bell, Home, List, ShoppingBag, User } from 'lucide-react'
 import React from 'react'
 
 const SmNavBar:React.FC = () => {
   return (
-    <nav className=" lg:hidden sm:block fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4">
+    <nav className=" lg:hidden sm:block fixed bottom-0 left-0 w-full border  text-white p-4 px-5">
     
-    <div>Home</div>
-    <div>About</div>
-    <div>Contact</div>
+    <div className='flex justify-center items-center gap-5 mx-5'>
+    <div className='flex flex-col gap-2 items-center text-black text-[12px]'><Home className='text-slate-700'/>Home</div>
+    <div className='flex flex-col gap-2 items-center text-black text-[12px]'><List className='text-slate-700'/>Categories</div>
+    <div className='flex flex-col gap-2 items-center text-black text-[12px]'><Bell className='text-slate-700'/>Notifications</div>
+    <div className='flex flex-col gap-2 items-center text-black text-[12px]'><User className='text-slate-700'/>Account</div>
+    <div className='flex flex-col gap-2 items-center text-black text-[12px]'><ShoppingBag className='text-slate-700'/>Cart</div>
+   
+    </div>
   </nav>
   )
 }
