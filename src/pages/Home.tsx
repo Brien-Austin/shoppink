@@ -1,7 +1,7 @@
 import SmNavBar from "@/components/NavBar/SmNavBar";
 import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
-import Shoppink from '../../public/shoppink.png'
+
 
 export default function Home(){
     return (
