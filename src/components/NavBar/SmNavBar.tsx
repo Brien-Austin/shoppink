@@ -2,13 +2,12 @@
 import { selectOption } from '@/store/features/navOptionSlice';
 import { RootState } from '@/store/store';
 import { Home as House ,List ,Bell,User,ShoppingBag} from "lucide-react";
-
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 const NavigationData = [
     {
-        name : 'House',
+        name : 'Home',
         link : '/',
         icon : <House/>
     },
@@ -23,7 +22,7 @@ const NavigationData = [
         icon : <Bell/>
     },
     {
-        name : 'Home',
+        name : 'Account',
         link : '/profile',
         icon : <User/>
     },
@@ -46,7 +45,7 @@ const SmNavBar:React.FC = () => {
     <div className='flex justify-center items-center gap-5 mx-5'>
         {NavigationData.map((data,index)=>(
            <Link to={data.link}onClick={()=>handleNav(data.name)} key={index}>
-             <h1 className={`flex flex-col gap-1 items-center  text-[10px] ${selectedNav ===data.name ? 'text-pink-600' :'text-slate-700'}`}> <span>{data.icon}</span> {data.name} </h1>
+             <h1 className={`flex flex-col gap-1 ease-out active:scale-105 focus:scale-105 items-center  text-[10px] ${selectedNav ===data.name ? 'text-pink-600' :'text-slate-700'}`}> <span>{data.icon}</span> {data.name} </h1>
            </Link>
         ))}
    
