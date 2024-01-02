@@ -12,7 +12,7 @@ export default function Home(){
             
         </div>
    
-     <h1 className="mx-16 sm:mx-5 mt-10 text-2xl  font-bold text-pink-700">Shop<span className="text-slate-800">Pink</span></h1>
+     <h1 className="mx-16 sm:mx-5 mt-5 text-2xl  font-bold text-pink-600">Shop<span className="text-slate-800">Pink</span></h1>
     
  
         <div className="">
