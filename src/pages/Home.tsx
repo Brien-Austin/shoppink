@@ -13,12 +13,7 @@ const  Home:React.FC =()=>{
     const select = useSelector((state:RootState)=>state.nav.selected)
     return (
         <>
-        <div className="w-full h-1 bg-pink-600">
-            
-           
-           
-            
-        </div>
+      
    
      <h1 className="mx-16 sm:mx-5 mt-5 text-2xl  font-bold text-pink-600 sm:block lg:hidden">Shop<span className="text-slate-800">Pink</span></h1>
     
