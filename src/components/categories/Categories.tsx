@@ -6,7 +6,7 @@ import './category.css'
 const Categories:React.FC=()=>{
     return (
         <>
-         <div className='flex lg:gap-10 sm:gap-2 carousel-container mt-4'>
+         <div className='flex lg:gap-10 sm:gap-5 carousel-container mt-4'>
      {
        
        categoriesData.map((data,index)=>(
