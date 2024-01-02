@@ -4,7 +4,7 @@ import React from 'react';
 
 const Navbar:React.FC = () => {
   return (
-    <nav className="p-5 w-full px-20 shadow">
+    <nav className="p-5 w-screen sm:hidden lg:block px-20 shadow">
       <div className="container mx-auto  flex justify-between items-center">
     <div className='flex items-center space-x-16'>
     <div className=" "><h1 className='text-2xl text-pink-600 '>ShopPink</h1></div>
