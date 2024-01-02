@@ -1,15 +1,20 @@
 import SmNavBar from "@/components/NavBar/SmNavBar";
 import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
-
+import Shoppink from '../../public/shoppink.png'
 
 export default function Home(){
     return (
         <>
         <div className="w-full h-1 bg-pink-700">
            
+           
             
         </div>
+   
+     <h1 className="mx-16 sm:mx-5 mt-10 text-2xl  font-bold text-pink-700">Shop<span className="text-slate-800">Pink</span></h1>
+    
+ 
         <div className="">
         <NavBar/>
         <SmNavBar/>
