@@ -6,7 +6,8 @@ import Categories from "../components/categories/Categories";
 export default function Home(){
     return (
         <>
-        <div className="w-full h-1 bg-pink-700">
+        <div className="w-full h-1 bg-pink-600">
+            
            
            
             
