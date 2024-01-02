@@ -1,4 +1,5 @@
-import NavBar from "../components/NavBar/NavBar";
+import SmNavBar from "@/components/NavBar/SmNavBar";
+import NavBar from "../components/NavBar/LgNavBar";
 import Categories from "../components/categories/Categories";
 
 
@@ -11,6 +12,7 @@ export default function Home(){
         </div>
         <div className="">
         <NavBar/>
+        <SmNavBar/>
        <div className="mx-16">
        <h1 className="mt-4 text-2xl font-bold text-slate-800">Explore Various Categories</h1>
        <Categories/>
